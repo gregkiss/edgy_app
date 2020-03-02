@@ -1,0 +1,33 @@
+<% content_for :title do %>APP_CAMEL | Contact Us<% end %>
+
+<%= render 'APP_NAME/pages/header' %>
+
+<h1>Contact Us</h1><br><br><br>
+<div class="contact">
+  <div id="contact-form">
+    <% if flash[:thanks] == "true" %>
+      <div class="big">Thanks for your message. We'll get back to you shortly.</div>
+    <% else %>
+      <% @contact = Contact.new %>
+      <%= form_for @contact, url: APP_NAME_contact_form_path(@contact) do |f| %>
+        <div class="ab-h2">Please fill out the form and we will be in touch.</div>
+        <%= f.text_field :name, placeholder:"Name", class:"contact-field" %><br>
+        <%= f.text_field :contact_info, placeholder:"Your Email", class:"contact-field" %><br>
+        <%= f.text_area :text, placeholder:"Message", class:"contact-field" %><br>
+				<%= f.hidden_field :app, value: "APP_NAME" %>
+        <%= f.submit "SUBMIT", id:"contact-submit" %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="connect-wrapper">
+    <div class="connect-h">Name</div>
+    Tel: 1 101 101 1010<br>
+    Email: example@gmail.com, or<br><br>
+    <div class="connect-h">Address</div>
+    101 10th Street NW<br>
+    Kansas City KA, 10101
+  </div>
+</div>
+<br><br>
+
+<%= render 'APP_NAME/pages/footer' %>

@@ -1,0 +1,17 @@
+<div id='footer'>
+	<div class='footer-menu'>
+		<%= link_to 'Home', APP_NAME_root_path, class:'footer-menu-link' %>
+		<%= link_to 'About', APP_NAME_about_path, class:'footer-menu-link' %>
+		<%= link_to 'Contact', APP_NAME_contact_path, class:'footer-menu-link' %>
+		<%= link_to 'Terms of Use', APP_NAME_terms_path, class:'footer-menu-link' %>
+		<%= link_to 'Privacy', APP_NAME_privacy_path, class:'footer-menu-link' %><br><br>
+EDGY_APP INSERT_MAP
+	</div>
+	<div class='footer-social'>
+		<h2>Follow</h2>
+		<div class='social-wrapper'><%= link_to (image_tag 'fb.png', class:'social'), 'https://facebook.com' %></div>
+		<div class='social-wrapper'><%= link_to (image_tag 'twitter.png', class:'social'), 'https://twitter.com' %></div>
+		<div class='social-wrapper'><%= link_to (image_tag 'youtube.png', class:'social'), 'https://youtube.com' %></div>
+	</div>
+	<div class='footer-c'>© <%=Date.today.year%> APP_NAME</div>
+</div>

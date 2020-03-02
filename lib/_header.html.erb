@@ -1,0 +1,22 @@
+<div class='header'>
+	<%= link_to (image_tag 'APP_NAME/Logo.png', id:'header-logo'), APP_NAME_root_path %>
+	<div class='header-menu-desktop'>
+		<%= link_to 'About', APP_NAME_about_path, class:'header-link' %>
+		<%= link_to 'Contact', APP_NAME_contact_path, class:'header-link' %>
+	</div>
+	<%= image_tag 'menu.png', id:'open-menu-mobile' %>
+</div>
+<div id='header-menu-mobile'>
+	<div id='close-header-menu-mobile'></div>
+	<%= link_to 'Home', APP_NAME_root_path, class:'header-link' %><br>
+	<%= link_to 'About', APP_NAME_about_path, class:'header-link' %><br>
+	<%= link_to 'Contact', APP_NAME_contact_path, class:'header-link' %>
+</div>
+<script type="text/javascript">
+	$("#open-menu-mobile").click(function() {
+		$("#header-menu-mobile").fadeIn(200);
+	});
+	$("#close-header-menu-mobile").click(function() {
+		$("#header-menu-mobile").fadeOut(100);
+	})
+</script>
