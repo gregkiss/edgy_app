@@ -1,3 +1,3 @@
-gem 'edgy_app'
-rails c
-EdgyApp.new
+gem 'edgy_app'  
+rails c  
+EdgyApp.new  
